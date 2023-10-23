@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatTabsModule,
     MatCardModule,
     MatIconModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

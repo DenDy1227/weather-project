@@ -1,0 +1,33 @@
+.tab-content {
+  background-color: transparentize(black, $amount: 0.5);
+  p{
+    color:aqua;
+
+  }
+}
+
+h2{
+  font-size: xx-large;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.red {
+  color:red;
+}
+
+.yellow {
+  color:yellow;
+}
+
+.blue {
+  color:blue;
+}
+
+.date-label {
+  color:rgb(182, 25, 25);
+  font-size: larger;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+::ng-deep.mat-mdc-tab-ripple {
+  border-left: solid 1px black !important;
+}
