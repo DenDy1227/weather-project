@@ -1,0 +1,39 @@
+<!-- <mat-tab-group [(selectedIndex)]="selectedTabIndex" (selectedIndexChange)="tabChanged($event)">
+  <mat-tab *ngFor="let tab of tabs; let i = index" label="{{ tab.label }}">
+    Tab Content {{ i + 1 }}
+    <button mat-button (click)="removeTab(i)">Remove Tab</button>
+  </mat-tab>
+</mat-tab-group> -->
+
+<!-- <button mat-raised-button (click)="addTab()">Add Tab</button> -->
+
+<!-- <mat-card *ngFor="let data of weatherData">
+  <mat-card-content>
+    <p>Date: {{ data.datetime }}</p>
+    <p>Conditions: {{ data.conditions }}</p>
+    <p>Temperature: {{ data.temp }}°C</p>
+    <p>Humidity: {{ data.humidity }}%</p>
+
+  </mat-card-content>
+</mat-card> -->
+
+<mat-tab-group>
+  <mat-tab *ngFor="let data of weatherData">
+    <ng-template mat-tab-label>
+      <!-- You can customize the tab label here if needed -->
+      <span class="date-label">{{ data.datetime }}</span>
+    </ng-template>
+    <div class="tab-content">
+      <p>Conditions: {{ data.conditions }}</p>
+      <p>Temperature: <span [ngClass]="getTemperatureColor(data.temp)"> {{ data.temp }}</span>°C</p>
+      <p>Humidity: {{ data.humidity }}%</p>
+      <i class="fas fa-cloud-showers-heavy"></i>
+      <!-- Add more data properties as needed -->
+
+      <!-- Additional elements within the tab -->
+      <!-- <button mat-button>Click me</button> -->
+      <!-- Add more HTML elements as needed -->
+    </div>
+  </mat-tab>
+</mat-tab-group>
+

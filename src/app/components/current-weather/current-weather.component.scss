@@ -1,0 +1,40 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+mat-tab-group {
+  background-size: cover; /* or background-size: contain; */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  filter:brightness(95%);
+  background-image: url('./../../../assets/backgrounds//6.jpg') ;
+}
+
+.tab-content {
+  background-color: transparentize(black, $amount: 0.5);
+  p{
+    color:aqua;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+}
+
+.red {
+  color:red;
+}
+
+.yellow {
+  color:yellow;
+}
+
+blue {
+  color:blue;
+}
+
+.date-label {
+  color:rgb(182, 25, 25);
+  font-size: larger;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+::ng-deep.mat-mdc-tab-ripple {
+  border-left: solid 1px black !important;
+}
