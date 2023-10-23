@@ -18,22 +18,40 @@
 </mat-card> -->
 
 <mat-tab-group>
-  <mat-tab *ngFor="let data of weatherData">
-    <ng-template mat-tab-label>
+  <!-- <mat-tab *ngFor="let data of weatherData"> -->
+  <!-- <mat-tab> -->
+    <!-- <ng-template mat-tab-label> -->
       <!-- You can customize the tab label here if needed -->
-      <span class="date-label">{{ data.datetime }}</span>
+      <!-- <span class="date-label">{{ data.datetime }}</span>
     </ng-template>
-    <div class="tab-content">
-      <p>Conditions: {{ data.conditions }}</p>
+     <div class="tab-content"
+      <!-- <p>Conditions: {{ data.conditions }}</p>
       <p>Temperature: <span [ngClass]="getTemperatureColor(data.temp)"> {{ data.temp }}</span>°C</p>
       <p>Humidity: {{ data.humidity }}%</p>
-      <i class="fas fa-cloud-showers-heavy"></i>
+      <i class="fas fa-cloud-showers-heavy"></i> --> -->
       <!-- Add more data properties as needed -->
 
       <!-- Additional elements within the tab -->
       <!-- <button mat-button>Click me</button> -->
       <!-- Add more HTML elements as needed -->
-    </div>
+    <!-- </div> -->
+
+
+  <!-- </mat-tab> -->
+  <mat-tab label="1 Day">
+
+    <app-forecast [countToDsplay]="1" [days]="dataSource.days"></app-forecast>
+  </mat-tab>
+  <mat-tab label="3 Days">
+
+    <app-forecast [countToDsplay]="3" [days]="dataSource.days"></app-forecast>
+  </mat-tab>
+  <mat-tab label="10 Days">
+
+    <app-forecast [countToDsplay]="10" [days]="dataSource.days"></app-forecast>
+  </mat-tab>
+  <mat-tab label="Month">
+    <app-forecast [countToDsplay]="30" [days]="dataSource.days"></app-forecast>
   </mat-tab>
 </mat-tab-group>
 

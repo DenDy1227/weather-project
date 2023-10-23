@@ -9,12 +9,16 @@ import { WeatherServiceTsService } from 'src/app/services/weather.service.ts.ser
 export class ForecastComponent implements OnInit {
   weatherData: any;
   weatherService: any;
+  @Input() countToDsplay!: number;
   @Input() days!: any;
+
   constructor( weatherService: WeatherServiceTsService, ) {}
   ngOnInit() {
     const location = 'Kharkiv'; // Replace with the desired location
     // this.weatherService.getWeatherData(location).subscribe((data: any) => {
-    //   this.weatherData = data;
+      const limit =(this.countToDsplay>this.days.length)?this.days.length:this.countToDsplay;
+      this.weatherData = this.days.slice(0,limit);
+      console.log(this.days,'forcast',limit,this.countToDsplay)
     // });
   }
 }
