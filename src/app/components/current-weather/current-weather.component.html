@@ -17,6 +17,10 @@
   </mat-card-content>
 </mat-card> -->
 
+<app-detail-forecast
+[hoursForecast]="dataSource.days[0].hours"
+>
+</app-detail-forecast>
 <mat-tab-group>
   <!-- <mat-tab *ngFor="let data of weatherData"> -->
   <!-- <mat-tab> -->
