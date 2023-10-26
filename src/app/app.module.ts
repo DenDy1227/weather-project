@@ -12,6 +12,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
+import { DetailForecastComponent } from './components/detail-forecast/detail-forecast.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { CommonModule } from '@angular/common';
     AppComponent,
     CurrentWeatherComponent,
     ForecastComponent,
-    HistoricalDataComponent
+    HistoricalDataComponent,
+    DetailForecastComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,16 @@
+
+.houres-forecast {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  height: 100px;
+  background-color: transparentize($color: #63778f, $amount: .5);
+  border-radius: 5px;
+
+  .hour {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
